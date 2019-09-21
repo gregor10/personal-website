@@ -1,0 +1,8 @@
+.git
+.env
+.testing
+.production
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore

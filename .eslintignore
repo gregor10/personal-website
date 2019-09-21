@@ -1,0 +1,15 @@
+/build/**
+/dist/**
+/coverage/**
+/node_modules/**
+/docs/**
+/jsdoc/**
+/templates/**
+/tests/bench/**
+/tests/fixtures/**
+/tests/performance/**
+/tmp/**
+test.js
+jest.setup.js
+jest.config.js
+!.eslintrc

@@ -1,0 +1,9 @@
+.Home {
+    display: flex;
+    .Home__components-wrapper {
+        flex: 1;
+        background: url('./bg.png');
+        overflow-y: scroll;
+        max-height: 100vh;
+    }
+}

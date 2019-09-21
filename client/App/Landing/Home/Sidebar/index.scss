@@ -1,0 +1,53 @@
+.Sidebar {
+    position: relative;
+    z-index: 2;
+    width: 190px;
+    height: 100vh;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+
+    .list__intro {
+        background-color: #fafafa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 33px 0;
+        border-bottom: 1px solid #ddd;
+
+        p {
+            font-size: 26px;
+            color: #008073;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        span {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #000;
+            font-weight: 100;
+        }
+    }
+
+    .list__item {
+        p {
+            padding: 7px 15px;
+            font-size: 14px;
+            font-weight: 300;
+            color: #444;
+        }
+
+        .list__item__svg-wrapper {
+            min-width: 30px;
+            svg {
+                path {
+                    fill: #00bcd4;
+                }
+            }
+        }
+    }
+}
