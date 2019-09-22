@@ -32,22 +32,25 @@ class About extends React.Component {
 
                 <div className='block__content About__body'>
                     <blockquote>
-                        <h2>An awesome headline about me</h2>
+                        <h2>The place for a motivational quote</h2>
                     </blockquote>
 
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Totam non eos beatae officia adipisci asperiores, vero assumenda consequatur maxime ducimus!
-                        Fugit itaque ex a omnis, animi non ea voluptatibus quod.
+                        I am a software engineer from Georgia,
+                         who loves to write software to build great products and help businesses succeed with their goals.
+                         I appreciate good design and I am seeing it{"'"}s importance more then ever in todays apps,
+                         web sites and products.
+                        <br /><br />
+                        I have an 2 - 2.5 years of experience in this field, basically using Javascript in projects.
                     </p>
 
-                    <br />
+                    <br /><br />
 
                     <p>
                         <b>Current focus</b>:
-                        <a href='#'>Tech1</a>{'//'}
-                        <a href='#'>Tech2</a>{'//'}
-                        <a href='#'>Tech3</a>
+                        <a href='#'>React</a>
+                        {'//'}
+                        <a href='#'>Redux</a>
                     </p>
                 </div>
             </div>

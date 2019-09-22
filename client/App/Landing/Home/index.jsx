@@ -25,6 +25,23 @@ class Home extends React.Component {
         this.componentsWrapperRef = React.createRef(null)
     }
 
+    componentDidMount() {
+        const scrollableContainer = this.componentsWrapperRef.current
+
+        const scrollEventId = scrollableContainer
+            .addEventListener('scroll', () => {
+                const offsetTop = scrollableContainer.scrollTop
+                this.setState({ offsetTop })
+            })
+
+        this.setState({ scrollEventId })
+    }
+
+    componentWillUnmount() {
+        this.componentsWrapperRef.current
+            .removeEventListener('scroll', this.state.scrollEventId)
+    }
+
     onRefUpdate(name, reference) {
         const { blocks } = this.state
 
@@ -40,10 +57,12 @@ class Home extends React.Component {
     render() {
         return (
             <div className='Home' >
-                <Sidebar references={{
-                    componentsWrapperRef: this.componentsWrapperRef,
-                    blocks: this.state.blocks
-                }} />
+                <Sidebar
+                    offsetTop={this.state.offsetTop}
+                    references={{
+                        componentsWrapperRef: this.componentsWrapperRef,
+                        blocks: this.state.blocks
+                    }} />
 
                 <div ref={this.componentsWrapperRef} className='Home__components-wrapper'>
                     <AboutBlock

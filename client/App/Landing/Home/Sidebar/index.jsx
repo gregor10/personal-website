@@ -43,6 +43,31 @@ class Sidebar extends React.Component {
         this.state = { activeIndex: 0 }
     }
 
+    componentDidUpdate(oldProps) {
+        const { offsetTop, references } = this.props
+        if (oldProps.offsetTop === offsetTop) {
+            return
+        }
+
+        // Got scroll event, check if should update active list item
+        this.updateActiveListItem(offsetTop, references)        
+    }
+
+    updateActiveListItem(offsetTop, references) {
+        const blocksOffsets = references.blocks.map((element) => (
+            element.reference.current.offsetTop
+        ))
+
+        let activeIndex
+        blocksOffsets.forEach((position, index) => {
+            if (offsetTop >= position) {
+                activeIndex = index
+            }
+        })
+
+        this.setState({ activeIndex })
+    }
+
     render() {
         const listItemClassnames = (index) => (
             classNames({
@@ -63,8 +88,6 @@ class Sidebar extends React.Component {
                         references.componentsWrapperRef.current,
                         references.blocks[index].reference.current
                     )
-
-                    this.setState({ activeIndex: index })
                 }}>
                 <div className='list__item__svg-wrapper'>{iconsArray[index]}</div>
                 <p>{blockName}</p>
@@ -86,7 +109,8 @@ class Sidebar extends React.Component {
 }
 
 Sidebar.propTypes = {
-    references: PropTypes.object
+    references: PropTypes.object,
+    offsetTop: PropTypes.number
 }
 
 export default Sidebar
