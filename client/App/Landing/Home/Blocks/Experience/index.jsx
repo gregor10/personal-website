@@ -36,6 +36,7 @@ class Experience extends React.Component {
                     accomplishments: [
                         // 'Sales automation with AI',
                         'Bots builder platform',
+                        'Remote identification',
                         'Emotions are Georgia',
                         'Mention Analytics',
                         'NLU for the Georgian language'

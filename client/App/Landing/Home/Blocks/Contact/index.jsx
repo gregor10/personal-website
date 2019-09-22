@@ -29,6 +29,9 @@ class Contact extends React.Component {
             <div ref={this.componentRef} className='Contact block'>
                 <div className='block__header'>{blockName}</div>
 
+                <div className='Contact__body'>
+                    Place for Contact
+                </div>
             </div>
         )
     }

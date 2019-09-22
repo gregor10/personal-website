@@ -4,4 +4,48 @@
     .ProjectCard__image {
         object-fit: contain;
     }
+
+    .ProjectCard__content {
+        h2 {
+            color: #008073;
+            font-weight: 300;
+            font-size: 24px;
+        }
+
+        p {
+            color: #666;
+            font-size: 13px;
+            margin-top: 20px;
+            min-height: 70px;
+        }
+    }
+
+    .ProjectCardDescription__content {
+        min-height: 310px;
+
+        .heading {
+            display: flex;
+            align-items: center;
+            margin: 5px 10px;
+
+            p {
+                color: #785549;
+                flex: 1;
+                font-size: 24px;
+                font-weight: 200;
+            }
+
+            span {
+                svg {
+                    cursor: pointer;
+                    width: 14px;
+                    margin-top: 2px;
+
+                    path {
+                        fill: #444;
+                    }
+                }
+            }
+        }
+    }
 }

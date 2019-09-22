@@ -29,6 +29,9 @@ class Skills extends React.Component {
             <div ref={this.componentRef} className='Skills block'>
                 <div className='block__header'>{blockName}</div>
 
+                <div className='Skills__body'>
+                    Place for Skills
+                </div>
             </div>
         )
     }

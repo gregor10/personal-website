@@ -29,6 +29,9 @@ class Blog extends React.Component {
             <div ref={this.componentRef} className='Blog block'>
                 <div className='block__header'>{blockName}</div>
 
+                <div className='Blog__body'>
+                    Place for Blog
+                </div>
             </div>
         )
     }
