@@ -1,0 +1,7 @@
+.Experience {
+    .Experience__body {
+        .ExperienceCard:not(:last-child) {
+            margin-bottom: 45px;
+        }
+    }
+}

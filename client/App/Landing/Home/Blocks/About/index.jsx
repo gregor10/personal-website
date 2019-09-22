@@ -30,7 +30,7 @@ class About extends React.Component {
             <div ref={this.componentRef} className='About block'>
                 <div className='block__header'>{blockName}</div>
 
-                <div className='About__body'>
+                <div className='block__content About__body'>
                     <blockquote>
                         <h2>An awesome headline about me</h2>
                     </blockquote>
