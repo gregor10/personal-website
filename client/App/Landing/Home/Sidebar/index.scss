@@ -43,11 +43,18 @@
 
         .list__item__svg-wrapper {
             min-width: 30px;
+
             svg {
                 path {
                     fill: #00bcd4;
                 }
             }
+        }
+    }
+
+    .list__item--active {
+        p {
+            font-weight: 500;
         }
     }
 }

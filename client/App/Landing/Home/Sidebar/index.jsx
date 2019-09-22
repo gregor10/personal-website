@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 import {
     ListItem
@@ -35,34 +36,53 @@ const smoothScroll = (scrollableContainer, scrollTarget) => {
     })
 }
 
-function Sidebar({ references }) {
-    const menuItems = BlocksArray.map((blockName, index) => {
-        return <ListItem
-            button
-            key={index}
-            className='list__item'
-            onClick={() => {
-                smoothScroll(
-                    references.componentsWrapperRef.current,
-                    references.blocks[index].reference.current
-                )
-            }}>
-            <div className='list__item__svg-wrapper'>{iconsArray[index]}</div>
-            <p>{blockName}</p>
-        </ListItem>
-    })
+class Sidebar extends React.Component {
+    constructor(props) {
+        super(props)
 
-    return (
-        <div className='Sidebar'>
-            <ul className='list'>
-                <li className='list__intro'>
-                    <p>Grigory Babajanyan</p>
-                    <span>Software Engineer</span>
-                </li>
-                {menuItems}
-            </ul>
-        </div>
-    )
+        this.state = { activeIndex: 0 }
+    }
+
+    render() {
+        const listItemClassnames = (index) => (
+            classNames({
+                list__item: true,
+                'list__item--active': this.state.activeIndex === index
+            })
+        )
+
+        const menuItems = BlocksArray.map((blockName, index) => {
+            const { references } = this.props
+
+            return <ListItem
+                button
+                key={index}
+                className={listItemClassnames(index)}
+                onClick={() => {
+                    smoothScroll(
+                        references.componentsWrapperRef.current,
+                        references.blocks[index].reference.current
+                    )
+
+                    this.setState({ activeIndex: index })
+                }}>
+                <div className='list__item__svg-wrapper'>{iconsArray[index]}</div>
+                <p>{blockName}</p>
+            </ListItem>
+        })
+
+        return (
+            <div className='Sidebar'>
+                <ul className='list'>
+                    <li className='list__intro'>
+                        <p>Grigory Babajanyan</p>
+                        <span>Software Engineer</span>
+                    </li>
+                    {menuItems}
+                </ul>
+            </div>
+        )
+    }
 }
 
 Sidebar.propTypes = {
