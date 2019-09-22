@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
     Card,
@@ -9,7 +10,9 @@ import {
 
 import './index.scss'
 
-function ExperienceCard({ title, subtitle, companyUrl, avatar, about, accomplishments, footer }) {
+function ExperienceCard({
+    title, subtitle, companyUrl, avatar, about, accomplishments, footer
+}) {
     const accomplishmentsList = accomplishments.map((accomplishment, index) => (
         <li key={index}>
             {accomplishment}
@@ -56,6 +59,16 @@ function ExperienceCard({ title, subtitle, companyUrl, avatar, about, accomplish
             </Card>
         </div >
     )
+}
+
+ExperienceCard.propTypes = {
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    companyUrl: PropTypes.string,
+    avatar: PropTypes.node,
+    about: PropTypes.string,
+    accomplishments: PropTypes.array,
+    footer: PropTypes.string
 }
 
 export default ExperienceCard
