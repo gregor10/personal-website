@@ -16,3 +16,10 @@
         padding: 45px;
     }
 }
+
+
+@media screen and (max-width: 800px) {
+    .block__content {
+        padding: 45px 15px !important;
+    }
+}

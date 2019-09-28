@@ -6,14 +6,12 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* On screens that are 800px or less, do the job */
-@media screen and (max-width: 800px) {
-    .Sidebar {
-        display: none;
-    }
+.Sidebar--mobile {
+    display: none;
 }
 
-.list {
+.list,
+.Sidebar--mobile__drawer {
     list-style: none;
     padding: 0;
 
@@ -58,7 +56,9 @@
             }
         }
     }
+}
 
+.list {
     .list__item--active {
         p {
             font-weight: 500;

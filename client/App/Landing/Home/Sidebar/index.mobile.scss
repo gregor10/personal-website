@@ -1,0 +1,37 @@
+@media screen and (max-width: 800px) {
+    .Sidebar {
+        display: none;
+    }
+
+    .Sidebar--mobile {
+        display: flex;
+        position: fixed;
+        top: 0;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        background: #fff;
+        width: 100%;
+        min-height: 40px;
+        z-index: 3;
+        padding: 10px 20px;
+
+        .Sidebar--mobile__menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .Sidebar--mobile__title {
+            margin-left: 40px;
+
+            h3 {
+                font-size: 21px;
+                color: #008073;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 14px;
+                color: #795548;
+            }
+        }
+    }
+}

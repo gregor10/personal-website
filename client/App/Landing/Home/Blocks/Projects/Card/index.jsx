@@ -1,17 +1,30 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import {
     Card,
     CardActionArea,
     CardMedia,
-    CardContent
+    CardContent,
+    Fab
 } from '@material-ui/core'
 
-import dashboardImage from '../dashboard.png'
+import CloseIcon from './icons/close'
+import LinkIcon from './icons/link'
 
 import './index.scss'
 
 class ProjectCard extends React.Component {
+    static get propTypes() {
+        return {
+            title: PropTypes.string.isRequired,
+            subtitle: PropTypes.string.isRequired,
+            image: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            href: PropTypes.string.isRequired
+        }
+    }
+
     constructor(props) {
         super(props)
 
@@ -29,47 +42,61 @@ class ProjectCard extends React.Component {
     }
 
     render() {
-        const projectOverview = <CardActionArea
-            onClick={() => this.showFullDescription()}>
-            <CardMedia
-                component='img'
-                alt='Image title'
-                height='200'
-                image={dashboardImage}
-                classes={{
-                    root: 'ProjectCard__image'
-                }}
-                title='Image title'
-            />
-            <CardContent
-                classes={{
-                    root: 'ProjectCard__content'
-                }}>
-                <h2>Dummy project</h2>
-                <p>Project description and technologies used</p>
-            </CardContent>
-        </CardActionArea>
+        const {
+            title,
+            subtitle,
+            image,
+            description,
+            href
+        } = this.props
+
+        const projectOverview = <div>
+            <CardActionArea
+                onClick={() => this.showFullDescription()}>
+                <CardMedia
+                    component='img'
+                    alt={title}
+                    height='200'
+                    image={image}
+                    classes={{
+                        root: 'ProjectCard__image'
+                    }}
+                    title={title}
+                />
+                <CardContent
+                    classes={{
+                        root: 'ProjectCard__content'
+                    }}>
+                    <h2>{title}</h2>
+                    <p>{subtitle}</p>
+                </CardContent>
+            </CardActionArea>
+        </div>
 
         const projectDescription = <div>
             <CardContent classes={{
                 root: 'ProjectCardDescription__content'
             }}>
                 <div className='heading' onClick={() => this.hideFullDescription()}>
-                    <p>Accomplishments</p>
-                    <span>
-                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'>
-                            <path d='M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z'>
-                            </path>
-                        </svg>
-                    </span>
+                    <p>Details</p>
+                    <span><CloseIcon /></span>
                 </div>
 
-                <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                </ul>
+                <div className='body'>
+                    <p>{description}</p>
 
+                    <br />
+                    <a href={href} target='_blank' rel='noopener noreferrer'>
+                        <Fab
+                            variant='extended'
+                            classes={{
+                                root: 'Fab-root'
+                            }}
+                            aria-label={title}>
+                            <LinkIcon />
+                        </Fab>
+                    </a>
+                </div>
             </CardContent>
         </div>
 

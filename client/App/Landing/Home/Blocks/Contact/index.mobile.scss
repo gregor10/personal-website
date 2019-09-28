@@ -1,0 +1,13 @@
+@media screen and (max-width: 800px) {
+    .Contact {
+        .Contact__body {
+            .Contact__body__column {
+                flex-direction: column;
+    
+                .Fab-root {
+                    margin: 0 0 15px 0;
+                }
+            }
+        }
+    }
+}

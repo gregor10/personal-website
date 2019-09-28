@@ -1,0 +1,19 @@
+.Contact {
+    .Contact__body {
+        .Contact__body__column {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+
+            .Fab-root {
+                margin-right: 25px;
+                background-color: #795548;
+            }
+
+            span {
+                font-weight: 400;
+                color: #009688;
+            }
+        }
+    }
+}

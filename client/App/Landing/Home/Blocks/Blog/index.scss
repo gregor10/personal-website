@@ -1,0 +1,13 @@
+.Blog {
+    .Blog__body {
+        height: calc(100vh - 161px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-weight: 600;
+            color: #428073;
+        }
+    }
+}

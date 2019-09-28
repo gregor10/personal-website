@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import BlocksArray from '../../blocks'
 
 import '../index.scss'
+import './index.scss'
 
 const blockName = BlocksArray[6]
 
@@ -30,7 +31,7 @@ class Blog extends React.Component {
                 <div className='block__header'>{blockName}</div>
 
                 <div className='Blog__body'>
-                    Place for Blog
+                    <p>Nothing has been posted yet</p>
                 </div>
             </div>
         )

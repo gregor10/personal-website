@@ -1,16 +1,36 @@
 .About {
     .About__body {
-        blockquote {
-            border-left: 5px solid #795548;
-            color: #795548;
-            font-size: 125%;
-            margin: 20px 0;
-            padding-left: 1.5rem;
+        .About__body__media {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
 
-            h2 {
-                font-weight: 400;
+            blockquote {
+                border-left: 5px solid #795548;
+                color: #795548;
+                // font-size: 125%;
+                font-size: 20px;
+                margin: 20px 0;
+                padding-left: 1.5rem;
+
+                h2 {
+                    font-weight: 400;
+                }
+            }
+
+            .About__body__media__avatar {
+                min-width: 90px;
+                min-height: 90px;
+                max-width: 90px;
+                max-height: 90px;
+                background: url('./greg.jpg');
+                background-size: contain;
+                border-radius: 45px;
+                border: 1px solid #795448;
+                margin-right: 30px;
             }
         }
+
 
         p {
             color: #333;
@@ -26,6 +46,25 @@
                 margin: 0 10px;
                 text-decoration: none;
                 color: #009688;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .About {
+        .About__body {
+            .About__body__media {
+                display: block;
+
+                .About__body__media__avatar {
+                    margin: 0 calc(50% - 45px);
+                }
+            }
+
+            p {
+                text-align: justify;
             }
         }
     }

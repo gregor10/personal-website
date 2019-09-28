@@ -6,6 +6,8 @@
     }
 
     .ProjectCard__content {
+        min-height: 130px;
+
         h2 {
             color: #008073;
             font-weight: 300;
@@ -15,7 +17,7 @@
         p {
             color: #666;
             font-size: 13px;
-            margin-top: 20px;
+            margin-top: 10px;
             min-height: 70px;
         }
     }
@@ -45,6 +47,14 @@
                         fill: #444;
                     }
                 }
+            }
+        }
+
+        .body {
+            margin: 30px 10px 0;
+
+            .Fab-root {
+                background-color: #795548;
             }
         }
     }
