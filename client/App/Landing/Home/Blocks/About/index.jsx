@@ -47,7 +47,7 @@ class About extends React.Component {
                     <p>
                         I am a software engineer from Georgia,
                          who loves to write software to build great products and help businesses succeed with their goals.
-                         I appreciate good design and I am seeing it{"'"}s importance more then ever in todays apps,
+                         I appreciate good design and I am seeing it{"'"}s importance more than ever in todays apps,
                         web sites and products.
                         <br /><br />
                         I have a 2 - 2.5 years of experience in this field, basically using Javascript in projects.
