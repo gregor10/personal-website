@@ -16,6 +16,7 @@ import RemoteIdImage from './assets/remote-id.png'
 import PulsarLandingImage from './assets/pulsar-landing.png'
 import MentionAnalyticsImage from './assets/dashboard.png'
 import WordnetImage from './assets/wordnet.png'
+import SmsTsuImage from './assets/sms.tsu.jpg'
 
 import '../index.scss'
 import './index.scss'
@@ -76,6 +77,13 @@ class Projects extends React.Component {
                     subtitle: 'GeWordNet is a lexical database for the Georgian language. It groups georgian words into sets of synonyms called synsets, provides short definitions and usage examples, and records a number of relations among these synonym sets or their members.',
                     image: WordnetImage,
                     href: '',
+                    description: 'No more information'
+                },
+                {
+                    title: 'Extension for TSU',
+                    subtitle: 'The extension beautifies some pages on sms.tsu.ge, website for Tbilisi State University students.',
+                    image: SmsTsuImage,
+                    href: 'https://chrome.google.com/webstore/detail/smstsuge-new-style/fhebnjlgmmblnfcpcmnndopkgfkmekgk?hl=en',
                     description: 'No more information'
                 }
             ]
