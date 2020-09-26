@@ -35,31 +35,25 @@ class About extends React.Component {
                     <div className='About__body__media'>
                         <div className='About__body__media__avatar'></div>
                         <blockquote>
-                            <h2>
-                                The place for a motivational quote
-                                {/* &quot;We are just an advanced breed of monkeys on a minor planet of a very average star&quot;
-                                (Stephen Hawking) */}
-                            </h2>
+                            <h2>Making bugs 🐞 since 2016</h2>
                         </blockquote>
                     </div>
 
-
                     <p>
-                        I am a software engineer from Georgia,
+                        <br />
+                        I am a software engineer from Georgia with 3+ years of experience,
                          who loves to write software to build great products and help businesses succeed with their goals.
                          I appreciate good design and I am seeing it{"'"}s importance more than ever in todays apps,
                         web sites and products.
-                        <br /><br />
-                        I have a 2 - 2.5 years of experience in this field, basically using Javascript in projects.
                     </p>
 
                     <br /><br />
 
                     <p>
                         <b>Current focus</b>:
-                        <a href='#'>React</a>
+                        <a href='#'>Javascript</a>
                         {'//'}
-                        <a href='#'>Redux</a>
+                        <a href='#'>React</a>
                     </p>
                 </div>
             </div>
