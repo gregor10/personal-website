@@ -35,7 +35,7 @@ class Education extends React.Component {
                     subtitle: 'Master of Information Technology',
                     url: 'https://tsu.ge/',
                     avatar: TsuLogo,
-                    footer: '2017 - Present | Tbilisi, GE'
+                    footer: '2017 - 2019 | Tbilisi, GE'
                 },
                 {
                     title: 'Tbilisi State University',
