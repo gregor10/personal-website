@@ -5,6 +5,7 @@ import BlocksArray from '../../blocks'
 
 import ExperienceCard from './Card'
 
+import PadsplitLogo from './padsplit.png';
 import PulsarLogo from './pulsar.png'
 import ShotaRustaveliNSFLogo from './shota-rustaveli-nsf.png'
 
@@ -28,6 +29,15 @@ class Experience extends React.Component {
         this.state = {
             experience: [
                 {
+                    title: 'Padsplit',
+                    subtitle: 'Frontend Engineer',
+                    companyUrl: 'https://www.padsplit.com',
+                    avatar: PadsplitLogo,
+                    accomplishments: [],
+                    about: 'PadSplit is an affordable housing tech startup that provides a house-sharing service for the workforce. It offers a platform that aligns incentives among residents, property owners, and communities to make affordable housing possible for the private market. The company uses shared living to make housing more affordable for low-income, empoweringthem to build savings and transform their lives.',
+                    footer: 'Jun 2020 - Present | Atlanta, GA (Remote)'
+                },
+                {
                     title: 'Pulsar AI',
                     subtitle: 'Software Engineer',
                     companyUrl: 'https://www.pulsar.ai/',
@@ -41,11 +51,11 @@ class Experience extends React.Component {
                         'Mention Analytics',
                         'NLU for the Georgian language'
                     ],
-                    footer: 'Jul 2017 - Present | Tbilisi, GE'
+                    footer: 'Jul 2017 - Jun 2020 | Tbilisi, GE'
                 },
                 {
                     title: 'Shota Rustaveli National Science Foundation',
-                    subtitle: 'Junior front-end Engineer',
+                    subtitle: 'Junior frontend Engineer',
                     companyUrl: 'https://rustaveli.org.ge/',
                     avatar: ShotaRustaveliNSFLogo,
                     about: 'The Shota Rustaveli National Science Foundation of Georgia (SRNSFG) is a Legal Entity of Public Law under the aegis of the Ministry of Education and Science of Georgia, which supports the development of Science, Technology and Innovation (STI) system in Georgia. The foundation implements grant calls, targeted programmes and projects, and is involved in international scientific networks and joint projects.',

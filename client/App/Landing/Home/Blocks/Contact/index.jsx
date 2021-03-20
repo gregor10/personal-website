@@ -13,8 +13,6 @@ import {
 import LinkedInIcon from  './icons/linkedin'
 import GithubIcon from './icons/github'
 import MailIcon from './icons/mail'
-import InstagramIcon from './icons/instagram'
-
 
 import BlocksArray from '../../blocks'
 
@@ -52,11 +50,6 @@ class Contact extends React.Component {
                     name: 'Gmail',
                     href: 'mailto:grigory.babajanyan@gmail.com?Subject=Hi buddy',
                     logo: MailIcon
-                },
-                {
-                    name: 'Instagram',
-                    href: 'https://www.instagram.com/levifabbiano',
-                    logo: InstagramIcon
                 }
             ]
         }

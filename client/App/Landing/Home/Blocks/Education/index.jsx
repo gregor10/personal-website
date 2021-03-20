@@ -67,7 +67,6 @@ class Education extends React.Component {
                     <Row>
                         {renderEducation}
                     </Row>
-
                 </div>
             </div>
         )

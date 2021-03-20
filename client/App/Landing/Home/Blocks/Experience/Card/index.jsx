@@ -46,7 +46,7 @@ function ExperienceCard({
                     }}>
                     <p className='ExperienceCard__about'>{about}</p>
 
-                    <h3>accomplishments</h3>
+                    {!!accomplishments.length && <h3>accomplishments</h3>}
 
                     <ul>{accomplishmentsList}</ul>
                 </CardContent>

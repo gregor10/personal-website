@@ -39,22 +39,19 @@ class About extends React.Component {
                         </blockquote>
                     </div>
 
-                    <p>
+                    <p className="About__body__text">
                         <br />
-                        I am a software engineer from Georgia with 3+ years of experience,
-                         who loves to write software to build great products and help businesses succeed with their goals.
-                         I appreciate good design and I am seeing it{"'"}s importance more than ever in todays apps,
-                        web sites and products.
+                        Software Engineer from Georgia with solid experience and knowledge of web development. I am a driven individual with self-growth potential.
                     </p>
 
                     <br /><br />
 
-                    <p>
+                    {/* <p>
                         <b>Current focus</b>:
                         <a href='#'>Javascript</a>
                         {'//'}
                         <a href='#'>React</a>
-                    </p>
+                    </p> */}
                 </div>
             </div>
         )
