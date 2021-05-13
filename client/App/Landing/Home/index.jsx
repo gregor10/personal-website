@@ -6,7 +6,6 @@ import BlocksArray from './blocks'
 
 import AboutBlock from './Blocks/About'
 import ExperienceBlock from './Blocks/Experience'
-import ProjectsBlock from './Blocks/Projects'
 import SkillsBlock from './Blocks/Skills'
 import EducationBlock from './Blocks/Education'
 import ContactBlock from './Blocks/Contact'
@@ -69,9 +68,6 @@ class Home extends React.Component {
                         onRefUpdate={(name, reference) => this.onRefUpdate(name, reference)} />
 
                     <ExperienceBlock
-                        onRefUpdate={(name, reference) => this.onRefUpdate(name, reference)} />
-
-                    <ProjectsBlock
                         onRefUpdate={(name, reference) => this.onRefUpdate(name, reference)} />
 
                     <SkillsBlock

@@ -14,7 +14,7 @@ import BlocksArray from '../../blocks'
 
 import '../index.scss'
 
-const blockName = BlocksArray[4]
+const blockName = BlocksArray[3]
 
 class Education extends React.Component {
     static get propTypes() {
