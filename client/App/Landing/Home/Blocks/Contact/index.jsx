@@ -20,7 +20,7 @@ import '../index.scss'
 import './index.scss'
 import './index.mobile.scss'
 
-const blockName = BlocksArray[5]
+const blockName = BlocksArray[4]
 
 class Contact extends React.Component {
     static get propTypes() {
@@ -48,7 +48,7 @@ class Contact extends React.Component {
                 },
                 {
                     name: 'Gmail',
-                    href: 'mailto:grigory.babajanyan@gmail.com?Subject=Hi buddy',
+                    href: 'mailto:mail@grigorybabajanyan.me?Subject=Hi buddy',
                     logo: MailIcon
                 }
             ]

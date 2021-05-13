@@ -22,7 +22,7 @@ import GitLogo from './icons/Git.png'
 
 import '../index.scss'
 
-const blockName = BlocksArray[3]
+const blockName = BlocksArray[2]
 
 class Skills extends React.Component {
     static get propTypes() {

@@ -6,7 +6,7 @@ import BlocksArray from '../../blocks'
 import '../index.scss'
 import './index.scss'
 
-const blockName = BlocksArray[6]
+const blockName = BlocksArray[5]
 
 class Blog extends React.Component {
     static get propTypes() {
